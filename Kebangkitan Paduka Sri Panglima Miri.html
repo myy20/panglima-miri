@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paduka Sri Panglima Miri | The Legend</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark: #0a0a0a;
+            --text: #e0e0e0;
+            --accent: #bc922e;
+        }
+
+        body {
+            background-color: var(--dark);
+            margin: 0;
+            font-family: 'Lora', serif;
+            color: var(--text);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, .nav-text {
+            font-family: 'Cinzel', serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* --- Audio Control Bar --- */
+        .audio-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(0,0,0,0.8);
+            padding: 10px;
+            border: 1px solid var(--gold);
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('coastline_blur.jpg'); /* Use a coastal background */
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            color: var(--gold);
+            margin: 0;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+        }
+
+        /* --- Content Layout --- */
+        .content-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 100px;
+        }
+
+        /* --- Weapon Gallery --- */
+        .weapon-gallery {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 50px 0;
+        }
+
+        .weapon-card {
+            flex: 1;
+            position: relative;
+            border: 1px solid #333;
+            overflow: hidden;
+            transition: 0.5s;
+            cursor: pointer;
+            height: 400px;
+            background: #111;
+        }
+
+        .weapon-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .weapon-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+            transition: 0.5s;
+        }
+
+        .weapon-card:hover img {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .weapon-info {
+            position: absolute;
+            bottom: 0;
+            padding: 20px;
+            background: linear-gradient(transparent, black);
+            width: 100%;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(transparent, #111);
+            font-style: italic;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="audio-player">
+        <span style="font-size: 0.7em; color: var(--gold);">AMBIENT: OFF</span>
+        <audio id="bgMusic" loop>
+            <source src="miri_ambient.mp3" type="audio/mpeg">
+        </audio>
+        <button onclick="toggleAudio()" style="background: none; border: 1px solid var(--gold); color: white; cursor: pointer;">Play/Pause</button>
+    </div>
+
+    <section class="hero">
+        <h1>Bangkitnya Kisah Lagenda</h1>
+        <p style="letter-spacing: 5px; color: #aaa;">PADUKA SRI PANGLIMA MIRI</p>
+        <div style="margin-top: 30px; animation: bounce 2s infinite;">
+            <a href="#start" style="color: var(--gold); text-decoration: none;">↓ SCROLL TO BEGIN</a>
+        </div>
+    </section>
+
+    <article class="content-wrapper" id="start">
+        
+        <div class="story-grid">
+            <div>
+                <h2 style="color: var(--gold);">Terpacak Besi Hidup Sebati</h2>
+                <p>
+                    Dilahirkan di tengah kabus pesisir pantai utara Sarawak sekitar tahun 1806, legenda ini bermula dengan seorang anak watan 
+                    yang sudah mencapai hulu <strong>Keris</strong> besi waja sebelum dia sendiri mampu berjalan. Dibesarkan 
+                    di bumi Miri, dia ditempa untuk menjadi benteng hidup antara kaumnya dan gelombang kekacauan yang mendatang.
+                
+                <p>
+                    Bukan sekadar darah yang mengalir di uratnya, tetapi <strong>deru ombak Laut China Selatan</strong> yang menjadi rentak jantungnya. 
+                    Kononnya, pada malam kelahirannya, alam seakan berbisik menceritakan takdir pahlawan yang bakal bangkit. 
+                    Beliau mempelajari rahsia angin—bagaimana mahu menjadi <strong>sepantas kilat</strong> namun <strong>setenang air di kuala</strong>.
+                </p>
+                    Bagi Paduka Sri Panglima, bumi Miri bukan sekadar tanah tempat berpijak, tetapi sebuah amanah suci. 
+                    Kehadirannya di pesisir pantai adalah sebuah amaran visual; bahawa selagi pasir masih memutih, 
+                    tiada penceroboh yang akan terlepas daripada mata <em>Keris Jatti</em> yang dahagakan keadilan.
+    </p>
+            </div>
+            <div style="border: 1px solid #333; padding: 10px;">
+                <img src="panglimamiri.png" alt="Panglima" style="width: 100%; filter: grayscale(50%);">
+            </div>
+        </div>
+
+        <h2 style="text-align: center; color: var(--gold); margin-bottom: 40px;">Galeri Senjata Warisan</h2>
+        <div class="weapon-gallery">
+            <div class="weapon-card">
+                <img src="keris_detail.jpg" alt="Keris Jatti Miriek">
+                <div class="weapon-info">
+                    <h3 style="color: var(--gold); margin: 0;">Keris Jatti Miriek</h3>
+                    <p style="font-size: 0.8em;">Senjata berluk simbol kedaulatan kaum asal Miri.</p>
+                </div>
+            </div>
+            <div class="weapon-card">
+                <img src="tombak_detail.jpg" alt="Tombak">
+                <div class="weapon-info">
+                    <h3 style="color: var(--gold); margin: 0;">Tombak Pesisir</h3>
+                    <p style="font-size: 0.8em;">Mengawal jarak, tenang seperti arus Sungai Adong.</p>
+                </div>
+            </div>
+        </div>
+
+        <section style="text-align: center; max-width: 800px; margin: 100px auto;">
+            <h2 style="color: var(--gold);">Semangat Jatti Miriek</h2>
+            <p>
+                Bukan gelaran yang dicari, tetapi takdir yang memanggil. Apabila badai penceroboh mula membadai pesisir, 
+                beliau berdiri sebagai benteng tunggal di antara keamanan dan kehancuran..
+            </p>
+        </section>
+
+        <footer>
+                <p>"Kesetiaan yang tidak berbelah bahagi kepada tanah tumpah darahnya akhirnya diiktiraf, 
+                lalu dinobatkan sebagai <strong>Paduka Sri Panglima Miri</strong>—sang penjaga yang 
+                sumpahnya terpatri pada setiap butir pasir di pantai ini."
+    </p>
+        </footer>
+
+    </article>
+
+    <script>
+        function toggleAudio() {
+            var music = document.getElementById("bgMusic");
+            var label = document.querySelector(".audio-player span");
+            if (music.paused) {
+                music.play();
+                label.innerHTML = "AMBIENT: ON";
+            } else {
+                music.pause();
+                label.innerHTML = "AMBIENT: OFF";
+            }
+        }
+    </script>
+</body>
+</html>
